@@ -7,9 +7,13 @@
   <div [innerHTML]="noOfRooms"></div>
 </div>
 
+<!-- Null collision operator -->
+{{ rooms?.availableRooms ?? 'No Rooms' }}
+
 <!-- Displaying list of available rooms using ngif only when there
-are rooms available -->
-<div *ngIf="rooms.availableRooms > 0">
+are rooms available (Optional chaining
+) -->
+<div *ngIf="rooms?.availableRooms">
  <h3> Available rooms list:</h3>
 </div>
 

@@ -13,11 +13,12 @@ export class RoomsComponent implements OnInit {
   hideRooms = false;
 
   rooms : Room = {
-    totalRooms: 20,
-    availableRooms: 10,
-    bookedRooms: 5
+
   }
 
+  // totalRooms: 20,
+  //   availableRooms: 10,
+  //   bookedRooms: 5
   constructor () {}
   ngOnInit(): void {
   }
