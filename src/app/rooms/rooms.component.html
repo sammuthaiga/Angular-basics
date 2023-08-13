@@ -2,5 +2,10 @@
 <h1>Welcome to {{hotelName}}</h1>
 
 <!-- property binding -->
-Number of Rooms:
-<div [innerHTML]="noOfRooms"></div>
+<div [hidden]="hideRooms">
+  <h4>Number of Rooms:</h4>
+  <div [innerHTML]="noOfRooms"></div>
+</div>
+
+<!-- Event binding -->
+<button (click)="toggle()">show/hide rooms</button>
