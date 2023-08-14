@@ -1,0 +1,11 @@
+// if the row index is even color set to steelblue
+.even {
+  background-color: steelblue;
+  color: white;
+}
+
+// if the row index is odd color set to tomato
+.odd {
+  background-color: tomato;
+  color: white;
+}
