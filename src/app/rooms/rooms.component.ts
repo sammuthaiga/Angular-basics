@@ -25,7 +25,8 @@ export class RoomsComponent implements OnInit {
     price : 1000,
     photos : "https://rb.gy/t0hqa",
     checkinTime : new Date("11-12-2022"),
-    checkoutTime : new Date("30-12-2022")
+    checkoutTime : new Date("30-12-2022"),
+    rating: 2.8
   },
   {
     roomNumber : 2,
@@ -34,7 +35,8 @@ export class RoomsComponent implements OnInit {
     price : 500,
     photos : "https://rb.gy/t0hqa",
     checkinTime : new Date("11-08-2022"),
-    checkoutTime : new Date("30-09-2022")
+    checkoutTime : new Date("30-09-2022"),
+    rating: 3.5
   },
   {
     roomNumber : 3,
@@ -43,7 +45,8 @@ export class RoomsComponent implements OnInit {
     price : 1500,
     photos : "https://rb.gy/t0hqa",
     checkinTime : new Date("11-06-2022"),
-    checkoutTime : new Date("30-07-2022")
+    checkoutTime : new Date("30-07-2022"),
+    rating: 4.5  
   }
 ]
 
