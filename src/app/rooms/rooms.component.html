@@ -4,7 +4,8 @@
 <!-- property binding -->
 <div [hidden]="hideRooms">
   <h4>Number of Rooms:</h4>
-  <div [innerHTML]="noOfRooms"></div>
+  <div [ngStyle]="{'color' : rooms.availableRooms ? 'steelblue' : 'red'}"
+  [innerHTML]="noOfRooms"></div>
 </div>
 
 <!-- Null collision operator -->
@@ -28,7 +29,9 @@ are rooms available (Optional chaining
   </tr>
 
   <!-- use *ngFor to loop through each room and display it's properties in a table formart -->
-  <tr *ngFor="let room of roomList; let e = even; let o = odd; let i = index;">
+  <tr
+  [ngClass]="e ? 'even' : 'odd'"
+  *ngFor="let room of roomList; let e = even; let o = odd; let i = index;">
     <td>{{ i }}</td>
     <td>{{ e? "Even" : "Odd"}}</td>
     <td>{{ room.roomNumber }}</td>
