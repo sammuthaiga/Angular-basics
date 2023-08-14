@@ -42,7 +42,7 @@ are rooms available (Optional chaining
     <td>{{ room.price | currency : 'KSH'}}</td>
     <td>{{ room.amenities | titlecase }}</td>
     <td>{{ room.checkinTime | date : "short" }}</td>
-    <td>{{room.rating}}</td>
+    <td>{{ room.rating | number : "1.1-1" }}</td>
 
   </tr>
  </table>
