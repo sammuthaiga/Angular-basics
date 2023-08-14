@@ -11,7 +11,7 @@
 <!-- Null collision operator -->
 {{ rooms?.availableRooms ?? 'No Rooms' }}
 
-{{roomList | json }}
+<!-- {{roomList | json }} -->
 
 <!-- Displaying list of available rooms using ngif only when there
 are rooms available (Optional chaining
@@ -28,6 +28,7 @@ are rooms available (Optional chaining
     <th>Room Price</th>
     <th>Room Amenities</th>
     <th>Checkin Time</th>
+    <th>Rating</th>
   </tr>
 
   <!-- use *ngFor to loop through each room and display it's properties in a table formart -->
@@ -41,6 +42,7 @@ are rooms available (Optional chaining
     <td>{{ room.price | currency : 'KSH'}}</td>
     <td>{{ room.amenities | titlecase }}</td>
     <td>{{ room.checkinTime | date : "short" }}</td>
+    <td>{{room.rating}}</td>
 
   </tr>
  </table>
