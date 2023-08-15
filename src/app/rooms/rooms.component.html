@@ -17,7 +17,9 @@
 are rooms available (Optional chaining
 ) -->
 <div *ngIf="rooms.availableRooms > 0">
- <hinv-rooms-list [rooms]="roomList"></hinv-rooms-list>
+ <hinv-rooms-list [rooms]="roomList"
+ (selectedRoom)="selectedRoom()"
+ ></hinv-rooms-list>
 </div>
 
 <!-- Event binding -->
