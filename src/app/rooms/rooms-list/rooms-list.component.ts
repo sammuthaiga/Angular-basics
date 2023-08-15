@@ -17,5 +17,8 @@ import { RoomList } from '../rooms';
 
   }
 
+  selectRoom(room: RoomList) {
+    this.selectedRoom.emit(room);
+  }
 
 }
