@@ -12,6 +12,9 @@
     <th>Room Amenities</th>
     <th>Checkin Time</th>
     <th>Rating</th>
+    <th>
+      Select Room
+    </th>
   </tr>
 
   <!-- use *ngFor to loop through each room and display it's properties in a table formart -->
@@ -26,6 +29,11 @@
     <td>{{ room.amenities | titlecase }}</td>
     <td>{{ room.checkinTime | date : "short" }}</td>
     <td>{{ room.rating | number : "1.1-1" }}</td>
+    <td>
+      <button class="btn btn-primary"
+      (click)="selectRoom(room)">
+    </button>
+    </td>
 
   </tr>
  </table>
