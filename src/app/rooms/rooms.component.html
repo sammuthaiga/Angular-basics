@@ -19,7 +19,7 @@ are rooms available (Optional chaining
 <div *ngIf="rooms.availableRooms > 0">
  <h3> Available rooms list:</h3>
  <!-- {{ roomList }} -->
- <table>
+ <table class="table">
   <tr>
     <th>Index</th>
     <th>Even/Odd</th>
@@ -49,4 +49,4 @@ are rooms available (Optional chaining
 </div>
 
 <!-- Event binding -->
-<button (click)="toggle()">show/hide rooms</button>
+<button class="button" (click)="toggle()">show/hide rooms</button>
