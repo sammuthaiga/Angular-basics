@@ -6,7 +6,7 @@ import { RoomList } from '../rooms';
   selector: 'hinv-rooms-list',
   templateUrl: './rooms-list.component.html',
   styleUrls: ['./rooms-list.component.scss'],
-  // changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
   export class RoomsListComponent  implements OnInit {
 
