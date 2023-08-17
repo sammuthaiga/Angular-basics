@@ -76,6 +76,8 @@ export class RoomsComponent implements OnInit {
       checkoutTime: new Date('11-27-2021'),
       rating:4.5
     }
-    this.roomList.push(room);
+    // this.roomList.push(room);
+    // Use the spread operator
+    this.roomList = [...this.roomList, room]
   }
 }
