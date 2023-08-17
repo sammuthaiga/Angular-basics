@@ -12,6 +12,8 @@ export class RoomsComponent implements OnInit {
 
   hideRooms = false;
 
+  selectedRoom! : RoomList
+
   rooms : Room = {
     totalRooms: 20,
     availableRooms: 10,
@@ -60,6 +62,20 @@ export class RoomsComponent implements OnInit {
   }
 
   selectRoom(room :RoomList) {
-    console.log(room);
+    this.selectedRoom = room;
+  }
+
+  addRoom() {
+    const room:RoomList = {
+      roomNumber: 4,
+      roomType: "deulex",
+      amenities:"Air conditioner, wifi, tv",
+      price: 500,
+      photos: "https://rb.gy/t0hqa",
+      checkinTime: new Date('11-27-2021'),
+      checkoutTime: new Date('11-27-2021'),
+      rating:4.5
+    }
+    this.roomList.push(room);
   }
 }
