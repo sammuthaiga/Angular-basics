@@ -1,7 +1,24 @@
 /* You can add global styles to this file, and also import other style files */
+// if the row index is even color set to steelblue
+.even {
+  background-color: steelblue;
+  color: white;
+}
 
+// if the row index is odd color set to tomato
+.odd {
+  background-color: tomato;
+  color: white;
+}
 /* Importing Bootstrap SCSS file. */
 @import "./node_modules/bootstrap/scss/bootstrap";
 
 /* Importing Datepicker SCSS file. */
 @import "node_modules/ngx-bootstrap/datepicker/bs-datepicker";
+
+// Import bootstrap.min.css
+
+@import "node_modules/bootstrap/dist/css/bootstrap.min.css"
+
+
+
