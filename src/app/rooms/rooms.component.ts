@@ -24,11 +24,11 @@ export class RoomsComponent implements OnInit, AfterViewInit {
   title= "Room List";
 
   roomList : RoomList[] = [];
-  @ViewChild(HeaderComponent, { static: true }) headercomponent!: HeaderComponent;
+  @ViewChild(HeaderComponent) headercomponent!: HeaderComponent;
   constructor () {}
 
   ngOnInit(): void {
-    console.log(this.headercomponent)
+    // console.log(this.headercomponent)
     this.roomList = [
       {
         roomNumber : 1,
@@ -64,7 +64,7 @@ export class RoomsComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit(): void {
-    console.log(this.headercomponent)
+    this.headercomponent.title = "Rooms view"
   }
   toggle () {
     this.hideRooms = !this.hideRooms;
