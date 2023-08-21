@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, OnInit, ViewChild, ViewContainerRef } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, OnInit, ViewChild, ViewContainerRef } from '@angular/core';
 import { RoomsComponent } from './rooms/rooms.component';
 
 @Component({
@@ -14,16 +14,22 @@ import { RoomsComponent } from './rooms/rooms.component';
 //     font-size: 128px;
 //     font-weight: bold;}`]
  })
-export class AppComponent implements AfterViewInit {
+export class AppComponent implements OnInit {
   title = 'hotelinventoryapp';
 
-  // role = 'Users';
-  @ViewChild('user', { read: ViewContainerRef } ) vcr!: ViewContainerRef
+  @ViewChild('name', { static: true }) name!: ElementRef
 
-  ngAfterViewInit(): void {
-      const componentRef = this.vcr.createComponent(RoomsComponent);
-      componentRef.instance.noOfRooms = 50;
-  }
+ngOnInit(): void {
+    (this.name.nativeElement.innerText = "Danret Hotel");
+}
+
+  // role = 'Users';
+  // @ViewChild('user', { read: ViewContainerRef } ) vcr!: ViewContainerRef
+
+  // ngAfterViewInit(): void {
+  //     const componentRef = this.vcr.createComponent(RoomsComponent);
+  //     componentRef.instance.noOfRooms = 50;
+  // }
 
 
 }
