@@ -1,12 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
 import { Room, RoomList } from './rooms';
+import { HeaderComponent } from '../header/header.component';
 
 @Component({
   selector: 'hinv-rooms',
   templateUrl: './rooms.component.html',
   styleUrls: ['./rooms.component.scss']
 })
-export class RoomsComponent implements OnInit {
+export class RoomsComponent implements OnInit, AfterViewInit {
   hotelName = 'Hilton'
   noOfRooms = 10;
 
@@ -23,9 +24,11 @@ export class RoomsComponent implements OnInit {
   title= "Room List";
 
   roomList : RoomList[] = [];
+  @ViewChild(HeaderComponent, { static: true }) headercomponent!: HeaderComponent;
   constructor () {}
 
   ngOnInit(): void {
+    console.log(this.headercomponent)
     this.roomList = [
       {
         roomNumber : 1,
@@ -58,6 +61,10 @@ export class RoomsComponent implements OnInit {
         rating: 4.5
       }
     ]
+  }
+
+  ngAfterViewInit(): void {
+    console.log(this.headercomponent)
   }
   toggle () {
     this.hideRooms = !this.hideRooms;
